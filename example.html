@@ -1,0 +1,30 @@
+<a href="https://www.youtube.com/watch?v=XHk5kCIiGoM"><span>YouTube</span></a>
+
+<a href="https://youtu.be/XHk5kCIiGoM?t=4"><span>YouTube, simplified link with time</span></a>
+
+<style>
+	a {
+		background: grey;
+		display: block;
+		padding-top: 56.25%;
+		position: relative;
+	}
+
+	a > span {
+		align-items: center;
+		bottom: 0;
+		display: flex;
+		left: 0;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+</style>
+
+<script src="source/js/youtube-embed" type="module"></script>
+<script>
+	[...document.querySelectorAll('a')].forEach((elYouTubeLink) => {
+		YouTubeEmbed(elYouTubeLink).initialize;
+	});
+</script>
