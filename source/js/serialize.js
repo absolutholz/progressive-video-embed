@@ -7,7 +7,7 @@
  *
  * @return string
  */
-export function serialize(params, prefix = null) {
+export default function serialize(params, prefix = null) {
 	const aEncodedArray = [];
 
 	for (let param in params) {

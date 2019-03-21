@@ -1,4 +1,4 @@
-export function VideoEmbed(elAnchor, src) {
+export default function VideoEmbed(elAnchor, src) {
 	/**
 	 * Replace an element with an iFrame with the passed src
 	 *
@@ -19,21 +19,21 @@ export function VideoEmbed(elAnchor, src) {
 		// elIframe.setAttribute('height', iHeight);
 		elIframe.setAttribute('allowfullscreen', true);
 
-		elAnchor.parentNode.replaceChild(elIframe, element);
+		elAnchor.parentNode.replaceChild(elIframe, elAnchor);
 
-		elAnchor.removeEventListener('click', _handleAnchorClick);
+		elAnchor.removeEventListener('click', _handle);
 
 		return elIframe;
-	}
+	};
 
-	function _handleAnchorClick(event) {
+	const _handle = function _handleAnchorClick(event) {
 		event.preventDefault();
 		replaceWithIframe();
-	}
+	};
 
-	elAnchor.addEventListener('click', _handleAnchorClick);
+	elAnchor.addEventListener('click', _handle);
 
 	return Object.freeze({
-		replaceWithIframe
+		replaceWithIframe,
 	});
 }

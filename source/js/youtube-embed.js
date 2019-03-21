@@ -1,7 +1,7 @@
-import VideoEmbed from 'video-embed';
-import serialize from 'serialize';
+import VideoEmbed from './video-embed.js';
+import serialize from './serialize.js';
 
-export function YouTubeEmbed() {
+export function YouTubeEmbed(element) {
 	const BASE_URL = 'https://www.youtube.com/embed/';
 	const DEFAULT_PARAMETERS = { autoplay: 1, rel: 0 };
 
@@ -42,6 +42,6 @@ export function YouTubeEmbed() {
  *
  * @param {HTMLElement} element
  */
-export function init(element) {
+export default function init(element) {
 	return YouTubeEmbed(element).initialize();
 }

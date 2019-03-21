@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "browser-sync start --server --files '.' 'build'"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/absolutholz/progressive-video-embed/issues"
   },
-  "homepage": "https://github.com/absolutholz/progressive-video-embed#readme"
+  "homepage": "https://github.com/absolutholz/progressive-video-embed#readme",
+  "dependencies": {
+    "aspect-ratios": "git+https://github.com/absolutholz/front-end-tooling.git"
+  }
 }
